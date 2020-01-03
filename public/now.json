@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "alias": "skang28-honest-takes-app",
+    "name": "bookmarks-app",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "dest": "/index.html" }
+    ]
+  }
