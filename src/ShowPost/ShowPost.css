@@ -1,0 +1,16 @@
+.singlePost {
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.onlyPost, .onlyComment {
+    border: solid;
+    border-color: black;
+}
+
+.onlyPost {
+    margin-bottom: 1em;
+    padding: 1em;
+}

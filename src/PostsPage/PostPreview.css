@@ -1,0 +1,14 @@
+.postPreview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1em;
+    border: solid;
+    border-color: black;
+}
+
+.postPreviewLink {
+    text-decoration: none;
+}
