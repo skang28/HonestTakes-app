@@ -14,15 +14,14 @@ class PostsPage extends Component {
             <div className="postsPage">
                 <NavBar />
                 <h1>Posts Page</h1>
-                <DailyTopic className={"postsPageTopic"}/>
                 <div className="posts-container">
                     {this.props.posts.length?
-                        this.props.posts.map(item => <PostPreview id = {item.id} title={item.title} date_posted={item.date_posted}/>)
+                        this.props.posts.map((item, index) => <PostPreview id = {item.id} title={item.title} date_posted={item.date_posted} key={"post" + index}/>)
                         :'There are no posts yet'} 
                 </div>
                 <button 
                     className="postsPageButton" 
-                    onClick = {() => this.props.history.push('/create-post')}
+                    onClick = {() => this.props.history.push('/posts/create-post')}
                 >Add Post</button>
             </div>
         )

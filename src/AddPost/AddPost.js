@@ -15,10 +15,9 @@ class AddPost extends React.Component {
                     onSubmit = {(event) => {
                         event.preventDefault()
                         this.props.addPost({
-                            id: 5,
                             title: event.target.addPostTitle.value,
                             content: event.target.addPostText.value,
-                            date_posted: '01/01/2020'
+                            date_posted: new Date().toISOString()
                         })
                         this.props.history.push('/posts')
                     }}> 

@@ -6,73 +6,37 @@ import PostsPage from '../PostsPage/PostsPage';
 import HomePage from '../HomePage/HomePage';
 import AddPost from '../AddPost/AddPost';
 import ShowPost from '../ShowPost/ShowPost';
+import DailyTopic from '../DailyTopic/DailyTopic';
 
 class App extends Component {
   state = {
-    posts: [
-      {
-          id:1,
-          title:'test post title 1',
-          content:'test post content 1',
-          date_posted:'01/01/2020'
-      },
-      {
-          id:2,
-          title:'test post title 2',
-          content:'test post content 2',
-          date_posted:'01/01/2020'
-      },
-      {
-          id:3,
-          title:'test post title 3',
-          content:'test post content 3',
-          date_posted:'01/01/2020'
-      }
-  ],
-    comments: [
-      {
-          id:1,
-          content:'test comment content 1',
-          date_posted:'01/01/2020',
-          post_id:1,
-      },
-      {
-          id:2,
-          content:'test comment content 2',
-          date_posted:'01/01/2020',
-          post_id:2,
-      },
-      {
-          id:3,
-          content:'test comment content 3',
-          date_posted:'01/01/2020',
-          post_id:2,
-      },
-      {
-        id:4,
-        content: 'test comment content 4',
-        date_posted: '01/01/2020',
-        post_id:3,
-      }
-  ]
+    posts: [],
+    comments: [],
+    topics: []
   };
 
   componentDidMount() {
     Promise.all([
         fetch(`${config.API_ENDPOINT}/api/posts`),
-        fetch(`${config.API_ENDPOINT}/api/comments`)
+        fetch(`${config.API_ENDPOINT}/api/comments`),
+        fetch(`${config.API_ENDPOINT}/api/topics`)
     ])
-    .then(([postsRes, commentsRes]) => {
+    .then(([postsRes, commentsRes, topicsRes]) => {
         if(!postsRes.ok)
             return postsRes.json().then(e => Promise.reject(e));
         if(!commentsRes.ok)
             return commentsRes.json().then(e => Promise.reject(e));
-        return Promise.all([postsRes.json(), commentsRes.json()]);
+        if(!topicsRes.ok)
+          return topicsRes.json().then(e => Promise.reject(e));
+        return Promise.all([postsRes.json(), commentsRes.json(), topicsRes.json()]);
     })
-    .then(([posts, comments]) => {
-        this.setState({posts, comments});
+    .then(([posts, comments, topics]) => {
+        this.setState({posts:posts.filter( (post) => {
+          return post.date_posted > topics[topics.length-1].date_posted
+        }), comments, topics});
         console.log(posts)
         console.log(comments)
+        console.log(topics)
     })
     .catch(error => {
         console.error({error});
@@ -125,21 +89,22 @@ class App extends Component {
 
   // filter comments by post Id for number of comments to be sent as a prop
   
-  addPost = (newPost) => {
+  /*addPost = (newPost) => {
     this.state.posts.push(newPost)
   }
 
   addComment = (newComment) => {
     this.state.comments.push(newComment)
-  }
+  }*/
 
   render() {
     return(
       <div className="app">
         <main className="app-main">
+          <Route path = '/posts' render={(props) => <DailyTopic {...props} topics={this.state.topics} />} />
           <Route exact path = '/' component={HomePage} />
           <Route exact path = '/posts' render={(props) => <PostsPage {...props} posts={this.state.posts} />} />
-          <Route path = '/create-post' render={(props) => <AddPost {...props} posts={this.state.posts} addPost={this.addPost} />} />
+          <Route path = '/posts/create-post' render={(props) => <AddPost {...props} posts={this.state.posts} addPost={this.addPost} />} />
           <Route path = '/posts/:postId' render={(props) => <ShowPost {...props} posts={this.state.posts} comments={this.state.comments} addComment={this.addComment}/>} />
         </main>
       </div>
