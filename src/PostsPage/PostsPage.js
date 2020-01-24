@@ -5,10 +5,6 @@ import './PostsPage.css'
 import DailyTopic from '../DailyTopic/DailyTopic'
 
 class PostsPage extends Component {
-    // show topic of discussion and all posts underneath (title, date_posted, # of comments)
-    // separate component to map the post previews
-    // button/link which takes user to AddPost (form)
-    // clicking each post preview takes you to individual posts' page ()
     render() {
         return(
             <div className="postsPage">

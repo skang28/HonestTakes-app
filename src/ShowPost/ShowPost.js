@@ -4,10 +4,6 @@ import Comment from './Comment.js'
 import NavBar from '../NavBar/NavBar'
 
 class ShowPost extends React.Component {
-    // shows individual post content and comments
-    // render the entire post and an array of comments
-    // another form here for comment creation
-
     render() {
         let getPost = (post_id) => {
            return this.props.posts.find(post => post_id == post.id)

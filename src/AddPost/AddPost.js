@@ -4,8 +4,6 @@ import './AddPost.css'
 import NavBar from '../NavBar/NavBar'
 
 class AddPost extends React.Component {
-    // form for post creation
-    // on submit it should go back to PostsPage updated with just created post
     render() {
         return(
             <section className="addPost">
