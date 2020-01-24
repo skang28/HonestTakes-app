@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import PostPreview from './PostPreview'
 import NavBar from '../NavBar/NavBar'
 import './PostsPage.css'
-import DailyTopic from '../DailyTopic/DailyTopic'
 
 class PostsPage extends Component {
     render() {
