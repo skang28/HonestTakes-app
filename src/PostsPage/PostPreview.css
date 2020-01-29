@@ -6,9 +6,29 @@
     margin-top: 1em;
     padding: 1em;
     border: solid;
-    border-color: black;
+    border-color: #A9B39F;
+    position: relative;
+}
+
+.postPreview:hover {
+    cursor: pointer;
+    border-width: thick;
 }
 
 .postPreviewLink {
     text-decoration: none;
+    margin: auto 0 auto 0;
+    color: #202C59;
+    font-weight: 500;
+}
+
+
+
+.postDate {
+    font-size: 0.75em;
+    color: #202C59;
+    margin: 0;
+    position: absolute;
+    top: 0.1em;
+    right: 0.5em;
 }

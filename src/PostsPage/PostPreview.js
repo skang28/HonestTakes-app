@@ -7,7 +7,7 @@ class PostPreview extends Component {
         return(
             <div className="postPreview">
                 <NavLink to = {`/posts/${this.props.id}`} className="postPreviewLink">{this.props.title}</NavLink>
-                <p>{this.props.date_posted}</p>
+                <p className="postDate">{this.props.date_posted}</p>
             </div>
         )
     }

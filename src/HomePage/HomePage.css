@@ -1,9 +1,20 @@
 .homePage {
     text-align: center;
+    color: #202C59;
+}
+
+html {
+    background-color: #F7F0F0;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 0.2em;
 }
 
 h2 {
     margin-bottom: 1em;
+    font-size: 2.5em;
 }
 
 h3 {
@@ -11,5 +22,44 @@ h3 {
 }
 
 p {
-    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.homePageHeader {
+    margin-bottom: 10em;
+}
+
+.homePageMain {
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textWrapper {
+    width: 40%;
+    padding-right: 10em;
+    padding-left: 15em;
+    margin-left: 15em;
+}
+
+.homeButton {
+    margin: auto 45em auto 0;
+    width: 15em;
+    height: 5em;
+    text-align:center;
+    text-decoration: none;
+    border-radius: 0.12em;
+    background-color: #BCCCAB;
+    color: #202C59;
+}
+
+.homeButton:hover {
+    color: #202C59;
+    background-color: #FFDFD6;
 }

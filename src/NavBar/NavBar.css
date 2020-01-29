@@ -3,3 +3,14 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.navLinks {
+    text-decoration: none;
+    color: #B3A684;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.navLinks:visited {
+    text-decoration: none;
+}

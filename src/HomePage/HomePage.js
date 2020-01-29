@@ -10,10 +10,12 @@ class HomePage extends React.Component {
               <h2>Open, Authentic, Sports Conversation.</h2>
             </header>
             <main className="homePageMain">
-              <h3>
-                Join the discussion. Honest Takes is a space for anyone to talk about different topics in the sports landscape. Let's chat, let's debate, but most importantly, let's share our love for sports!
-              </h3>
-              <p>Every day there will be a new topic or question centered around what's buzzing in the sports world. Create your own post or react to other posts with your own comments.   </p>
+              <div className="textWrapper">
+                <p>
+                  Join the discussion. Honest Takes is a space for anyone to talk about different topics in the sports landscape. Let's chat, let's debate, but most importantly, let's share our love for sports!
+                </p>
+                <p>Every day there will be a new topic or question centered around what's buzzing in the sports world. Create your own post or react to other posts with your own comments.   </p>
+              </div>
               <button className="homeButton" onClick = {() => this.props.history.push('/posts')}>Enter Discussion</button>
             </main>
           </div>

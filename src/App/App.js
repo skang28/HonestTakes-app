@@ -87,21 +87,12 @@ class App extends Component {
     .catch((error) => console.log(error))
   }
 
-  // filter comments by post Id for number of comments to be sent as a prop
-  
-  /*addPost = (newPost) => {
-    this.state.posts.push(newPost)
-  }
-
-  addComment = (newComment) => {
-    this.state.comments.push(newComment)
-  }*/
 
   render() {
     return(
       <div className="app">
         <main className="app-main">
-          <Route path = '/posts' render={(props) => <DailyTopic {...props} topics={this.state.topics} />} />
+          <Route path = '/posts' render={(props) => <DailyTopic {...props} topics={this.state.topics} className="dailyTopic" />} />
           <Route exact path = '/' component={HomePage} />
           <Route exact path = '/posts' render={(props) => <PostsPage {...props} posts={this.state.posts} />} />
           <Route path = '/posts/create-post' render={(props) => <AddPost {...props} posts={this.state.posts} addPost={this.addPost} />} />

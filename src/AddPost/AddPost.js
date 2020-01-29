@@ -8,7 +8,6 @@ class AddPost extends React.Component {
         return(
             <section className="addPost">
                 <NavBar />
-                <DailyTopic className={"addPostTopic"}/>
                 <form className="addPostForm"
                     onSubmit = {(event) => {
                         event.preventDefault()

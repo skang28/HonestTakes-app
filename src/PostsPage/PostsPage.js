@@ -8,7 +8,6 @@ class PostsPage extends Component {
         return(
             <div className="postsPage">
                 <NavBar />
-                <h1>Posts Page</h1>
                 <div className="posts-container">
                     {this.props.posts.length?
                         this.props.posts.map((item, index) => <PostPreview id = {item.id} title={item.title} date_posted={item.date_posted} key={"post" + index}/>)
