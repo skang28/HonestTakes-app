@@ -1,10 +1,10 @@
 .homePage {
     text-align: center;
-    color: #202C59;
+    color: black;
 }
 
 html {
-    background-color: #F7F0F0;
+    background-color: #474954;
 }
 
 h1 {
@@ -27,7 +27,8 @@ p {
 }
 
 .homePageHeader {
-    margin-bottom: 10em;
+    margin-bottom: 8em;
+    font-family: 'Poppins', sans-serif;
 }
 
 .homePageMain {
@@ -39,27 +40,236 @@ p {
 main {
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Anonymous Pro', monospace;
 }
 
 .textWrapper {
-    width: 40%;
-    padding-right: 10em;
+    width: 70%;
+    padding-right: 8em;
     padding-left: 15em;
-    margin-left: 15em;
+    margin-left: 12em;
+    font-size: 1.1em;
 }
 
 .homeButton {
-    margin: auto 45em auto 0;
-    width: 15em;
+    margin: auto 35em auto 0;
+    width: 20em;
     height: 5em;
     text-align:center;
     text-decoration: none;
     border-radius: 0.12em;
-    background-color: #BCCCAB;
-    color: #202C59;
+    background-color: #FFE287;
+    color: black;
+    font-weight: bold;
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
 }
 
 .homeButton:hover {
-    color: #202C59;
-    background-color: #FFDFD6;
+    background-color: #B38E3B;
+    -webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1700px) {
+    .textWrapper {
+        width: 60%;
+    }
+
+    .homeButton {
+        margin-right: 25em;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+
+    .homeButton {
+        margin-right: 20em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 5em;
+        padding-left: 5em;
+        margin-left: 8em;
+    }
+
+    .homeButton {
+        margin-right: 15em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 5em;
+        padding-left: 2em;
+        margin-left: 8em;
+    }
+
+    .homeButton {
+        margin-right: 10em;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 5em;
+        padding-left: 2em;
+        margin-left: 5em;
+        font-size: 1em;
+    }
+
+    .homeButton {
+        margin-right: 7em;
+        width:15em;
+        height: 5em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 5em;
+        padding-left: 2em;
+        margin-left: 5em;
+        font-size: 1em;
+    }
+
+    .homeButton {
+        margin-right: 7em;
+        height: 4em;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    header h2 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 5em;
+        padding-left: 2em;
+        margin-left: 5em;
+        font-size: 0.9em;
+    }
+
+    .homeButton {
+        margin-right: 7em;
+        height: 4em;
+        font-size: 0.8em;
+    }
+
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    header h2 {
+        font-size: 1.75em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 3em;
+        padding-left: 2em;
+        margin-left: 5em;
+        font-size: 0.8em;
+    }
+
+    .homeButton {
+        margin-right: 7em;
+        height: 4em;
+        font-size: 0.7em;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    .homePageHeader {
+        margin-bottom: 4em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 3em;
+        padding-left: 2em;
+        margin-left: 5em;
+        font-size: 0.65em;
+    }
+
+    .homeButton {
+        margin-right: 5em;
+        height: 4em;
+        font-size: 0.7em;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    .homePageHeader {
+        margin-bottom: 4em;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    .textWrapper {
+        width: 60%;
+        padding-right: 3em;
+        padding-left: 2em;
+        margin-left: 5em;
+        font-size: 0.5em;
+    }
+
+    .homeButton {
+        margin-right: 5em;
+        height: 4em;
+        font-size: 0.5em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1em;
+    }
+
+    .homePageHeader {
+        margin-bottom: 4em;
+    }
+
 }

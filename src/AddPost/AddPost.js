@@ -1,13 +1,10 @@
 import React from 'react'
-import DailyTopic from '../DailyTopic/DailyTopic'
 import './AddPost.css'
-import NavBar from '../NavBar/NavBar'
 
 class AddPost extends React.Component {
     render() {
         return(
             <section className="addPost">
-                <NavBar />
                 <form className="addPostForm"
                     onSubmit = {(event) => {
                         event.preventDefault()
@@ -18,8 +15,8 @@ class AddPost extends React.Component {
                         })
                         this.props.history.push('/posts')
                     }}> 
-                    <textarea name="addPostTitle" className="addPostTitle-text" required>Title/Summary</textarea>
-                    <textarea name="addPostText" className="addPost-text" required>Go on, type away!</textarea>
+                    <textarea name="addPostTitle" className="addPostTitle-text" placeholder="Title/Summary" required></textarea>
+                    <textarea name="addPostText" className="addPost-text" placeholder="Go on, type away!" required></textarea>
                     <button type="submit" className="addPostButton">Create Post</button>
                 </form>
             </section>

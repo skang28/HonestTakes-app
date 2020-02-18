@@ -7,6 +7,7 @@ import HomePage from '../HomePage/HomePage';
 import AddPost from '../AddPost/AddPost';
 import ShowPost from '../ShowPost/ShowPost';
 import DailyTopic from '../DailyTopic/DailyTopic';
+import NavBar from '../NavBar/NavBar';
 
 class App extends Component {
   state = {
@@ -92,11 +93,12 @@ class App extends Component {
     return(
       <div className="app">
         <main className="app-main">
+          <Route path = '/posts' component={NavBar} />
           <Route path = '/posts' render={(props) => <DailyTopic {...props} topics={this.state.topics} className="dailyTopic" />} />
           <Route exact path = '/' component={HomePage} />
           <Route exact path = '/posts' render={(props) => <PostsPage {...props} posts={this.state.posts} />} />
           <Route path = '/posts/create-post' render={(props) => <AddPost {...props} posts={this.state.posts} addPost={this.addPost} />} />
-          <Route path = '/posts/:postId' render={(props) => <ShowPost {...props} posts={this.state.posts} comments={this.state.comments} addComment={this.addComment}/>} />
+          <Route path = '/posts/show/:postId' render={(props) => <ShowPost {...props} posts={this.state.posts} comments={this.state.comments} addComment={this.addComment}/>} />
         </main>
       </div>
     )

@@ -1,5 +1,6 @@
 .postsPage {
     text-align: center;
+    margin-top: 5em;
 }
 
 h1 {
@@ -8,22 +9,62 @@ h1 {
 }
 
 .posts-container {
-    width: 60%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .postsPageButton {
-    margin: 0 auto 0 auto;
+    margin: 3em auto 0 auto;
     width: 15em;
     height: 3em;
     text-align:center;
     text-decoration: none;
     border-radius: 0.12em;
-    background-color: #BCCCAB;
-    color: #202C59;
+    background-color: #FFE287;
+    color: black;
+    font-weight: bold;
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
 }
 
 .postsPageButton:hover {
-    background-color: #FFDFD6;
+    background-color: #B38E3B;
+    -webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+    border-radius: 25px;
+    cursor: pointer;
 }
+
+@media only screen and (max-width: 950px) {
+    .posts-container {
+        width:60%;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .posts-container {
+        width:70%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .posts-container {
+        width:70%;
+    }
+
+    .postsPageButton {
+        width: 12em;
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    .postsPageButton {
+        width: 10em;
+    }
+}
+

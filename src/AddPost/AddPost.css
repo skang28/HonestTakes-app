@@ -3,25 +3,97 @@ form {
 }
 
 .addPost-text {
-    width: 20em;
-    height: 7em;
+    width: 40%;
+    height: 10em;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3em;
-    margin-bottom: 1em;
+    margin: 3em auto 1em auto;
 }
 
 .addPostTitle-text {
-    width: 20em;
+    width: 40%;
     height: 2em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
+    margin: 1em auto 0 auto;
 }
 
 .addPostButton {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto 0 auto;
+    width: 15%;
+    height: 3em;
+    text-align:center;
+    text-decoration: none;
+    border-radius: 0.12em;
+    background-color: #FFE287;
+    color: black;
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.addPostButton:hover {
+    background-color: #B38E3B;
+    -webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    border: 1.5px solid #202C59;
+}
+
+@media only screen and (max-width: 1300px) {
+    .addPost-text {
+        width: 50%;
+    }
+
+    .addPostTitle-text {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .addPost-text {
+        width: 60%;
+    }
+
+    .addPostTitle-text {
+        width: 60%;
+    }
+
+    .addPostButton {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .addPost-text {
+        width: 65%;
+    }
+
+    .addPostTitle-text {
+        width: 65%;
+    }
+
+    .addPostButton {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .addPostButton {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .addPostButton {
+        font-size: 0.8em;
+        width: 30%;
+    }
 }

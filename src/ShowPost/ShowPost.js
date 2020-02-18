@@ -1,7 +1,8 @@
 import React from 'react'
 import './ShowPost.css'
 import Comment from './Comment.js'
-import NavBar from '../NavBar/NavBar'
+import {format} from 'date-fns'
+
 
 class ShowPost extends React.Component {
     render() {
@@ -11,6 +12,7 @@ class ShowPost extends React.Component {
         
         let post = getPost(this.props.match.params.postId)
         if (!post) post={title: "Loading..."}
+        let date = post.date_posted || new Date().toISOString()
 
         let getComment = (post_id) => {
             return this.props.comments.filter(comment => post_id == comment.post_id)
@@ -20,14 +22,16 @@ class ShowPost extends React.Component {
         
         return(
             <section className="singlePost">
-                <NavBar />
-                <h1>{post.title}</h1>
                 <div className="onlyPost">
+                    <h1 className="postTitle">{post.title}</h1>
                     <p>{post.content}</p>
-                    <p>{post.date_posted}</p>
+                    <p className="postDate">{format(new Date(date), 'MMM do, yyyy')}</p>
                 </div>
+                <p className="commentTitle">Comments...</p>
                 <div className="onlyComment">
-                    {comment.map((comment, index) => <Comment content={comment.content} date_posted={comment.date_posted} key={"post" + index}/>)}
+                    {this.props.comments.length?
+                        comment.map((comment, index) => <Comment content={comment.content} date_posted={format(new Date(comment.date_posted), 'MMM do, yyyy')} key={"post" + index}/>)
+                        :'There are no comments yet'}
                 </div>
                 <form 
                     onSubmit = {(event) => {
@@ -38,8 +42,8 @@ class ShowPost extends React.Component {
                             post_id: post.id
                         })
                     }}>
-                    <textarea name="addCommentText" className="addComment-text" required defaultValue="Go on, type away!"></textarea>
-                    <button type="submit" className="addCommentButton">Create Post</button>
+                    <textarea name="addCommentText" className="addComment-text" required placeholder="Respond!"></textarea>
+                    <button type="submit" className="addCommentButton">Add Comment</button>
                 </form>
             </section>
         )

@@ -1,16 +1,106 @@
 .singlePost {
     text-align: center;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 50%;
+    margin: 5em auto 0 auto;
 }
 
-.onlyPost, .onlyComment {
+
+.onlyPost {
     border: solid;
+    border-color: #A9B3CE;
+    border-radius: 0.5em;
+    color: black;
+    margin-bottom: 5em;
+    margin-top: 1em;
+    padding: 1em;
+    position: relative;
+    background-color: #7284A8;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 1.2em;
+}
+
+.postDate {
+    font-size: 0.75em;
+    color: black;
+    margin: 0;
+    position: absolute;
+    top: 0.1em;
+    right: 0.5em;
+}
+
+div.onlyComment:empty {
+    border: none;
+}
+
+.postTitle {
+    font-size: 2em;
+    display: block;
+}
+
+.addCommentButton {
+    margin: 0 auto 5em auto;
+    width: 30%;
+    height: 3em;
+    text-align:center;
+    text-decoration: none;
+    border-radius: 0.12em;
+    background-color: #FFE287;
+    color: black;
+    display: block;
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.addCommentButton:hover {
+    background-color: #B38E3B;
+    -webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.addComment-text {
+    width: 70%;
+    height: 7em;
+    margin: 3em auto 1em auto;
     border-color: black;
 }
 
-.onlyPost {
-    margin-bottom: 1em;
-    padding: 1em;
+.commentTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 900px) {
+    .addCommentButton {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .singlePost {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .onlyPost {
+        font-size: 0.9em;
+    }
+
+    .addCommentButton {
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .addCommentButton {
+        width: 40%;
+        font-size: 0.5em;
+    }
 }

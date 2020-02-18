@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin: 1em auto 2em auto;
     padding: 1em;
     border: solid;
-    border-color: #A9B39F;
+    border-color: #A9B3CE;
     position: relative;
+    background-color: #7284A8;
+    border-radius: 0.5em;
+
 }
 
 .postPreview:hover {
@@ -18,17 +20,23 @@
 .postPreviewLink {
     text-decoration: none;
     margin: auto 0 auto 0;
-    color: #202C59;
-    font-weight: 500;
+    color: black;
+    font-weight: 600;
+    font-size: 1.4em;
+    font-family: 'Anonymous Pro', monospace;
 }
-
-
 
 .postDate {
     font-size: 0.75em;
-    color: #202C59;
+    color: black;
     margin: 0;
     position: absolute;
     top: 0.1em;
     right: 0.5em;
+}
+
+@media only screen and (max-width: 395px) {
+    .postPreviewLink {
+        font-size: 1.2em;
+    }
 }
