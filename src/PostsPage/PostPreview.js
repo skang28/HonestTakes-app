@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './PostPreview.css'
 import {format} from 'date-fns'
 
+// displays individual posts on Posts page 
 class PostPreview extends Component {
     render() {
         return(

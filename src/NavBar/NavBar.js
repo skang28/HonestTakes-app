@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import './NavBar.css'
 import logo from './honestT_logo.png'
 
+
 class NavBar extends React.Component {
     render() {
         return(

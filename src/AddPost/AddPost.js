@@ -1,6 +1,7 @@
 import React from 'react'
 import './AddPost.css'
 
+// Component for form to create new post
 class AddPost extends React.Component {
     render() {
         return(

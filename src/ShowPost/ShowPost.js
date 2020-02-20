@@ -3,7 +3,7 @@ import './ShowPost.css'
 import Comment from './Comment.js'
 import {format} from 'date-fns'
 
-
+// displays individual post with its content and has form handler for adding comments
 class ShowPost extends React.Component {
     render() {
         let getPost = (post_id) => {

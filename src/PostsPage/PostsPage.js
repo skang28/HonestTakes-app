@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PostPreview from './PostPreview'
 import './PostsPage.css'
 
+// renders each individual post through PostPreview
 class PostsPage extends Component {
     render() {
         return(

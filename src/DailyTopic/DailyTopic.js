@@ -1,6 +1,7 @@
 import React from 'react'
 import './DailyTopic.css'
 
+// displays daily topic, used on multiple paths
 class DailyTopic extends React.Component {
     static defaultProps = {
         topics:[]

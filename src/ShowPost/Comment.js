@@ -1,8 +1,8 @@
 import React from 'react'
 import './Comment.css'
 
+// component is for showing the comment on the individual post page (date_posted, content, etc.)
 class Comment extends React.Component {
-    // component is for showing the comment on the individual post page (date_posted, content, etc.)
     render() {
         return(
             <section className="comment">
