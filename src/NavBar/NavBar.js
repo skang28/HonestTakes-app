@@ -8,7 +8,7 @@ class NavBar extends React.Component {
     render() {
         return(
             <nav className="nav">
-                <Link to='/'><img src={logo} className="homeLogo" /></Link>
+                <Link to='/'><img src={logo} alt="Honest Takes logo" className="homeLogo" /></Link>
                 <Link to='/posts' className="navLinks">Main</Link>
             </nav>
         )

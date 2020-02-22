@@ -44,7 +44,7 @@ class App extends Component {
     })
   }
 
-  addPost = (newPost) => {
+  addPost = (newPost, onDone) => {
     let newPosts = this.state.posts
     fetch(`${config.API_ENDPOINT}/api/posts`, {
       method: 'POST',
@@ -55,18 +55,22 @@ class App extends Component {
     })
     .then(res => {
       if(!res.ok) {
+        res.json().then((error) => {
+          onDone && onDone(error)
+        })
         throw new Error(res.status)
       }
-      return res.json()
+      else return res.json()
     })
     .then( (newPostResponse) => {
       newPosts.push(newPostResponse)
       this.setState({posts: newPosts})
+      onDone && onDone()
     })
     .catch((error) => console.log(error))
   }
 
-  addComment = (newComment) => {
+  addComment = (newComment, onDone) => {
     let newComments = this.state.comments
     fetch(`${config.API_ENDPOINT}/api/comments`, {
       method: 'POST',
@@ -77,13 +81,17 @@ class App extends Component {
     })
     .then(res => {
       if(!res.ok) {
+        res.json().then((error) => {
+          onDone && onDone(error)
+        })
         throw new Error(res.status)
       }
-      return res.json()
+      else return res.json()
     })
     .then( (newCommentResponse) => {
       newComments.push(newCommentResponse)
       this.setState({comments: newComments})
+      onDone && onDone()
     })
     .catch((error) => console.log(error))
   }

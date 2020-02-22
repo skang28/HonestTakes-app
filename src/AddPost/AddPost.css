@@ -23,7 +23,7 @@ form {
     text-align:center;
     text-decoration: none;
     border-radius: 0.12em;
-    background-color: #FFE287;
+    background-color: #FFF5D6;
     color: black;
     -webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -35,7 +35,7 @@ form {
 }
 
 .addPostButton:hover {
-    background-color: #B38E3B;
+    background-color: #B3A372;
     -webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
     border-radius: 25px;
@@ -45,6 +45,10 @@ form {
 textarea {
     resize: none;
     border: 1.5px solid #202C59;
+}
+
+.addPostError {
+    color: #D6DCFF;
 }
 
 @media only screen and (max-width: 1300px) {

@@ -21,7 +21,7 @@ h1 {
     text-align:center;
     text-decoration: none;
     border-radius: 0.12em;
-    background-color: #FFE287;
+    background-color: #FFF5D6;
     color: black;
     font-weight: bold;
     -webkit-transition: all 0.5s;
@@ -33,7 +33,7 @@ h1 {
 }
 
 .postsPageButton:hover {
-    background-color: #B38E3B;
+    background-color: #B3A372;
     -webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
     border-radius: 25px;

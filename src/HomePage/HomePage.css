@@ -1,6 +1,6 @@
 .homePage {
     text-align: center;
-    color: black;
+    color: #D6DCFF;
 }
 
 html {
@@ -22,7 +22,7 @@ h3 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -58,7 +58,7 @@ main {
     text-align:center;
     text-decoration: none;
     border-radius: 0.12em;
-    background-color: #FFE287;
+    background-color: #FFF5D6;
     color: black;
     font-weight: bold;
     -webkit-transition: all 0.5s;
@@ -70,7 +70,7 @@ main {
 }
 
 .homeButton:hover {
-    background-color: #B38E3B;
+    background-color: #B3A372;
     -webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
     border-radius: 25px;
@@ -79,7 +79,7 @@ main {
 
 @media only screen and (max-width: 1700px) {
     .textWrapper {
-        width: 60%;
+        width: 65%;
     }
 
     .homeButton {
@@ -127,11 +127,11 @@ main {
 
 @media only screen and (max-width: 850px) {
     .textWrapper {
-        width: 60%;
+        width: 70%;
         padding-right: 5em;
         padding-left: 2em;
         margin-left: 5em;
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     .homeButton {
@@ -143,11 +143,11 @@ main {
 
 @media only screen and (max-width: 800px) {
     .textWrapper {
-        width: 60%;
+        width: 70%;
         padding-right: 5em;
         padding-left: 2em;
         margin-left: 5em;
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .homeButton {
@@ -170,7 +170,7 @@ main {
         padding-right: 5em;
         padding-left: 2em;
         margin-left: 5em;
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 
     .homeButton {
@@ -218,11 +218,11 @@ main {
 
 @media only screen and (max-width: 450px) {
     .textWrapper {
-        width: 60%;
+        width: 70%;
         padding-right: 3em;
         padding-left: 2em;
         margin-left: 5em;
-        font-size: 0.65em;
+        font-size: 0.9em;
     }
 
     .homeButton {
@@ -247,11 +247,11 @@ main {
 
 @media only screen and (max-width: 350px) {
     .textWrapper {
-        width: 60%;
+        width: 80%;
         padding-right: 3em;
         padding-left: 2em;
         margin-left: 5em;
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
 
     .homeButton {

@@ -28,6 +28,10 @@
     right: 0.5em;
 }
 
+.onlyComment {
+    margin-bottom: 3em;
+}
+
 div.onlyComment:empty {
     border: none;
 }
@@ -44,7 +48,7 @@ div.onlyComment:empty {
     text-align:center;
     text-decoration: none;
     border-radius: 0.12em;
-    background-color: #FFE287;
+    background-color: #FFF5D6;
     color: black;
     display: block;
     -webkit-transition: all 0.5s;
@@ -57,7 +61,7 @@ div.onlyComment:empty {
 }
 
 .addCommentButton:hover {
-    background-color: #B38E3B;
+    background-color: #B3A372;
     -webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
     border-radius: 25px;
@@ -74,6 +78,11 @@ div.onlyComment:empty {
 .commentTitle {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
+}
+
+.addCommentError {
+    font-size: 1.2em;
+    color: #D6DCFF;
 }
 
 @media only screen and (max-width: 900px) {

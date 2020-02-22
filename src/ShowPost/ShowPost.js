@@ -5,6 +5,10 @@ import {format} from 'date-fns'
 
 // displays individual post with its content and has form handler for adding comments
 class ShowPost extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {message: null}
+    }
     render() {
         let getPost = (post_id) => {
            return this.props.posts.find(post => post_id == post.id)
@@ -33,6 +37,7 @@ class ShowPost extends React.Component {
                         comment.map((comment, index) => <Comment content={comment.content} date_posted={format(new Date(comment.date_posted), 'MMM do, yyyy')} key={"post" + index}/>)
                         :'There are no comments yet'}
                 </div>
+                {this.state.message ? <p className="addCommentError">{this.state.message}</p>:''}
                 <form 
                     onSubmit = {(event) => {
                         event.preventDefault()
@@ -40,6 +45,12 @@ class ShowPost extends React.Component {
                             content: event.target.addCommentText.value,
                             date_posted: new Date().toISOString(),
                             post_id: post.id
+                        }, (error) => {
+                            if(error) {
+                                this.setState({
+                                    message: error.error.message
+                                })
+                            }
                         })
                     }}>
                     <textarea name="addCommentText" className="addComment-text" required placeholder="Respond!"></textarea>
