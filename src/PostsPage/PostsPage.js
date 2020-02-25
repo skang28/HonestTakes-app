@@ -4,6 +4,10 @@ import './PostsPage.css'
 
 // renders each individual post through PostPreview
 class PostsPage extends Component {
+    static defaultProps = {
+        posts: []
+    }
+    
     render() {
         return(
             <div className="postsPage">
@@ -19,6 +23,6 @@ class PostsPage extends Component {
             </div>
         )
     }
-}
+} 
 
 export default PostsPage;

@@ -5,6 +5,10 @@ import {format} from 'date-fns'
 
 // displays individual posts on Posts page 
 class PostPreview extends Component {
+    static defaultProps = {
+        date_posted: '2020-02-25T01:08:49.675Z'
+    }
+    
     render() {
         return(
             <div className="postPreview">

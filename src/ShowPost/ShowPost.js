@@ -9,6 +9,14 @@ class ShowPost extends React.Component {
         super(props)
         this.state = {message: null}
     }
+    static defaultProps = {
+        match: {
+            params: {}
+        },
+        comments:[],
+        posts:[]
+    }
+
     render() {
         let getPost = (post_id) => {
            return this.props.posts.find(post => post_id == post.id)
