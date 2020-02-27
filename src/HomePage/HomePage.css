@@ -24,6 +24,7 @@ h3 {
 p {
     font-size: 1.5em;
     font-weight: bold;
+    text-align: left;
 }
 
 .homePageHeader {
@@ -125,34 +126,66 @@ main {
     }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
     .textWrapper {
         width: 70%;
-        padding-right: 5em;
-        padding-left: 2em;
-        margin-left: 5em;
+        margin: 1em auto 1em auto;
         font-size: 1.3em;
+        padding: 0;
     }
 
     .homeButton {
-        margin-right: 7em;
+        margin: 1em auto 1em auto;
         width:15em;
-        height: 5em;
+        height: 4em;
+    }
+
+    .homePageMain {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+    }
+
+    .homePageHeader {
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .textWrapper {
+        width: 70%;
+        margin: 1em auto 1em auto;
+        font-size: 1.3em;
+        padding: 0;
+    }
+
+    .homeButton {
+        margin: 1em auto 1em auto;
+        width:15em;
+        height: 4em;
+    }
+
+    .homePageMain {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+    }
+
+    .homePageHeader {
+        margin-bottom: 1em;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .textWrapper {
         width: 70%;
-        padding-right: 5em;
-        padding-left: 2em;
-        margin-left: 5em;
+        margin: 1em auto 1em auto;
         font-size: 1.2em;
+        padding: 0;
     }
 
     .homeButton {
-        margin-right: 7em;
-        height: 4em;
+        height: 3.5em;
     }
 
     header h1 {
@@ -166,15 +199,13 @@ main {
 
 @media only screen and (max-width: 650px) {
     .textWrapper {
-        width: 60%;
-        padding-right: 5em;
-        padding-left: 2em;
-        margin-left: 5em;
+        width: 70%;
+        margin: 1em auto 1em auto;
         font-size: 1.1em;
+        padding: 0;
     }
 
     .homeButton {
-        margin-right: 7em;
         height: 4em;
         font-size: 0.8em;
     }
@@ -190,15 +221,13 @@ main {
 
 @media only screen and (max-width: 550px) {
     .textWrapper {
-        width: 60%;
-        padding-right: 3em;
-        padding-left: 2em;
-        margin-left: 5em;
-        font-size: 0.8em;
+        width: 70%;
+        margin: 1em auto 1em auto;
+        font-size: 0.9em;
+        padding: 0;
     }
 
     .homeButton {
-        margin-right: 7em;
         height: 4em;
         font-size: 0.7em;
     }
@@ -219,15 +248,13 @@ main {
 @media only screen and (max-width: 450px) {
     .textWrapper {
         width: 70%;
-        padding-right: 3em;
-        padding-left: 2em;
-        margin-left: 5em;
-        font-size: 0.9em;
+        margin: 1em auto 1em auto;
+        font-size: 0.8em;
+        padding: 0;
     }
 
     .homeButton {
-        margin-right: 5em;
-        height: 4em;
+        height: 3.5em;
         font-size: 0.7em;
     }
 
@@ -240,7 +267,7 @@ main {
     }
 
     .homePageHeader {
-        margin-bottom: 4em;
+        margin-bottom: 3em;
     }
 
 }
@@ -248,15 +275,13 @@ main {
 @media only screen and (max-width: 350px) {
     .textWrapper {
         width: 80%;
-        padding-right: 3em;
-        padding-left: 2em;
-        margin-left: 5em;
-        font-size: 0.8em;
+        margin: 1em auto 1em auto;
+        font-size: 0.6em;
+        padding: 0;
     }
 
     .homeButton {
-        margin-right: 5em;
-        height: 4em;
+        height: 3.5em;
         font-size: 0.5em;
     }
 
@@ -269,7 +294,7 @@ main {
     }
 
     .homePageHeader {
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
 
 }

@@ -8,10 +8,9 @@ class DailyTopic extends React.Component {
     }
 
     render() {
-        console.log(this.props.topics)
         return(
-            <section className={`${this.props.className}`} classname2={`${this.props.className2}`} >
-                <p>{this.props.topics.length&&this.props.topics[this.props.topics.length-1].topic}</p>
+            <section className={`${this.props.className}`} >
+                <p className="topicText">{this.props.topics.length&&this.props.topics[this.props.topics.length-1].topic}</p>
             </section>
         )
     }

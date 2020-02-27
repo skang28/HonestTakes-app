@@ -43,7 +43,7 @@ div.onlyComment:empty {
 
 .addCommentButton {
     margin: 0 auto 5em auto;
-    width: 30%;
+    width: 17em;
     height: 3em;
     text-align:center;
     text-decoration: none;
@@ -85,31 +85,64 @@ div.onlyComment:empty {
     color: #D6DCFF;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1400px) {
     .addCommentButton {
-        font-size: 0.9em;
+        width: 15em;
     }
-}
 
-@media only screen and (max-width: 800px) {
     .singlePost {
         width: 60%;
     }
 }
 
-@media only screen and (max-width: 500px) {
-    .onlyPost {
+@media only screen and (max-width: 1100px) {
+    .addCommentButton {
+        width: 13em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .addCommentButton {
         font-size: 0.9em;
     }
 
+    .singlePost {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .singlePost {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
     .addCommentButton {
-        font-size: 0.6em;
+        width: 12em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .onlyPost {
+        font-size: 0.8em;
+    }
+
+    .addCommentButton {
+        width: 10em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .addCommentButton {
+        width: 10em;
+        font-size: 0.7em;
     }
 }
 
 @media only screen and (max-width: 320px) {
     .addCommentButton {
-        width: 40%;
-        font-size: 0.5em;
+        width: 10em;
+        font-size: 0.6em;
     }
 }

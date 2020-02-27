@@ -1,21 +1,21 @@
-section {
+.topicText {
     text-align: center;
 }
 
 @media only screen and (max-width: 950px) {
-    p {
+    .topicText {
         font-size: 1.1em;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    p {
+    .topicText {
         font-size: 1em;
     }
 }
 
 @media only screen and (max-width: 395px) {
-    p {
+    .topicText {
         font-size: 0.9em;
     }
 }

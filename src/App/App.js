@@ -35,9 +35,6 @@ class App extends Component {
         this.setState({posts:posts.filter( (post) => {
           return post.date_posted > topics[topics.length-1].date_posted
         }), comments, topics});
-        console.log(posts)
-        console.log(comments)
-        console.log(topics)
     })
     .catch(error => {
         console.error({error});
